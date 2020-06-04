@@ -63,7 +63,8 @@ public class RabbitSender {
         MessagePostProcessor mpp = new MessagePostProcessor() {
 
             @Override
-            public org.springframework.amqp.core.Message postProcessMessage(org.springframework.amqp.core.Message message) throws AmqpException {
+            public org.springframework.amqp.core.Message postProcessMessage
+                    (org.springframework.amqp.core.Message message) throws AmqpException {
                 System.out.println("--> post to do: " + message);
                 return message;
             }
